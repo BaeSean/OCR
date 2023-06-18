@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>OCR Extension</title>
+  <!-- <script src='https://cdn.jsdelivr.net/npm/ocrad.js/ocrad.js'></script> -->
+  <!-- <script src='https://cdnjs.cloudflare.com/ajax/libs/tesseract.js/4.1.0/tesseract.min.js'></script> -->
+  <script src='https://cdn.jsdelivr.net/npm/tesseract.js@4/dist/tesseract.min.js'></script>
+  <style>
+    .container {
+      max-width: 600px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+
+    h1 {
+      text-align: center;
+    }
+
+    #captureBtn {
+      display: block;
+      margin: 20px auto;
+    }
+
+    #resultTextarea {
+      width: 100%;
+      min-height: 150px;
+      resize: vertical;
+    }
+
+    #screenshotPreview {
+      margin-top: 20px;
+      max-width: 100%;
+    }
+
+    #screenshotAfter {
+      margin-top: 20px;
+      max-width: 100%;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>OCR Extension</h1>
+    <button id="captureBtn">Capture and Process Screenshot</button>
+    <textarea id="resultTextarea"></textarea>
+    <img id="screenshotPreview" src="" alt="Screenshot Preview">
+    <img id="screenshotAfter" src="" alt="Screenshot After">
+  </div>
+  <script src="capture.js"></script>
+  <script src="https://html2canvas.hertzen.com/dist/html2canvas.min.js"></script>
+</body>
+</html>
